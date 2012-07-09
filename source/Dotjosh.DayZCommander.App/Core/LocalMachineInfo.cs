@@ -141,7 +141,7 @@ namespace Dotjosh.DayZCommander.App.Core
 					continue;
 				}
 
-				var match = Regex.Match(changeLogLine, @"\d(\.\d){1,3}");
+				var match = Regex.Match(changeLogLine, @"\d(?:\.\d){1,3}");
 				if(!match.Success)
 				{
 					continue;

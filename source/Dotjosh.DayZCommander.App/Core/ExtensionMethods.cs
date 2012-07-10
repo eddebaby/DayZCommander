@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace Dotjosh.DayZCommander.App.Core
@@ -56,6 +57,31 @@ namespace Dotjosh.DayZCommander.App.Core
 				}
 			}
 			return false;
+		}
+
+		public static bool EndsWithAny(this string value, params string[] values)
+		{
+			if(string.IsNullOrEmpty(value))
+			{
+				return false;
+			}
+			foreach(var s in values)
+			{
+				if(value.EndsWith(s, StringComparison.OrdinalIgnoreCase))
+				{
+					return true;
+				}
+			}
+			return false;
+		}
+
+		public static string MakeSurePathExists(this string path)
+		{
+			if(!Directory.Exists(path))
+			{
+				Directory.CreateDirectory(path);
+			}
+			return path;
 		}
 	}
 }

@@ -59,7 +59,11 @@
 			<CheckBox Content="Hide Wrong Arma2 Version"
 					  IsChecked="{Binding Filter.HideWrongArma2Version, Mode=TwoWay}"
 					  Foreground="#EEEEEE"
-					  Margin="0 10 0 0"/>			
+					  Margin="0 10 0 0"/>
+				<CheckBox Content="Hide Different Arma2 Version"
+					  IsChecked="{Binding Filter.HideDiffArma2Version, Mode=TwoWay}"
+					  Foreground="#EEEEEE"
+					  Margin="0 10 0 0"/>			  
 			<CheckBox Content="Hide Wrong DayZ Version"
 					  IsChecked="{Binding Filter.HideWrongDayZVersion, Mode=TwoWay}"
 					  Foreground="#EEEEEE"
